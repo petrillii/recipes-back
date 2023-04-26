@@ -1,4 +1,5 @@
 from flask import Flask
+from app.api.resources import *
 
 app = Flask(__name__)
 
