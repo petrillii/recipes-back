@@ -4,12 +4,12 @@ from run import app
 
 @app.route('/usuarios', methods=['GET'])
 def usuarios():
-    usuarios = usuarios.get_all_usuarios()
+    usuarios = usuarios.getAllUsuarios()
     return jsonify(usuarios)
 
 @app.route('/usuarios/<id>', methods=['GET'])
 def user(id):
-    user = usuarios.get_user_by_id(id)
+    user = usuarios.getUserById(id)
     if user:
         return jsonify(user)
     else:
