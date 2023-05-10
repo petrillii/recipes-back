@@ -1,5 +1,7 @@
-from flask import Flask,request,jsonify
+import traceback
+from flask import Flask, request, jsonify
 from app.api.resources import *
+from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -16,22 +18,31 @@ class tb_user(db.Model):
 def index():
     return 'Hello, world!'
 
-@app.route("/register",methods=["POST"])
+@app.route("/register", methods=["POST"])
 def register():
-    if request.methods == 'POST':
-        username = request.json['username']
-        email = request.json['email']
-        password = request.json['password']
+    data = request.get_json()
 
-        user = tb_user(
-            username,
-            email,
-            password
-        )
-        db.session.add(user)
-        db.session.commit()
-        results = user.query.filter_by(email=email).first()
-        return jsonify(results)
-    
+    user = tb_user()
+    user.email = data["email"]
+    user.username = data["username"]
+    user.password = generate_password_hash(data["password"])
+
+    db.session.add(user)
+
+    try:
+        db.session.commit()  
+        return jsonify({
+            "username": user.username,
+            "email": user.email,
+            "password": user.password
+        }), 201
+    except Exception as error:
+        print(error)
+        traceback.print_exc()
+        return jsonify({
+            "message": "Por algum motivo não conseguimos fazer o cadastro do usuário.",
+            "statusCode": 500
+        }), 500
+
 if __name__ == '__main__':
     app.run(debug=True)
