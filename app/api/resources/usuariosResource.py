@@ -1,26 +1,69 @@
-from flask import request, jsonify
-from controllers import usuariosConstroller
-from run import app
+from models import usuariosModel
+from flask_sqlalchemy import SQLAlchemy
+from flask import Flask, jsonify
+from werkzeug.security import check_password_hash
 
-@app.route('/usuarios/obter', methods=['GET'])
-def usuarios():
-    usuarios = usuariosConstroller.obter_usuarios()
-    return jsonify(usuarios)
+app = Flask(__name__)
+db = SQLAlchemy(app)
 
-@app.route('/usuarios/<id>', methods=['GET'])
-def user(id):
-    user = usuariosConstroller.obter_usuario_por_id(id)
+def obter_usuarios():
+    users = usuariosModel.Usuarios.query.all()
+    return [usuarios.to_dict() for usuarios in users]
+
+def obter_usuario_por_id(id):
+    user = usuariosModel.Usuarios.query.filter_by(id=id).first()
     if user:
-        return jsonify(user)
+        return user.to_dict()
     else:
-        return jsonify({'error': 'User not found'})
+        return None
+    
+def cadastrar_usuario(data):
+    usuario = data["usuario"]
+    email = data["email"]
+    senha = data["senha"]
 
-@app.route("/usuarios/cadastrar", methods=["POST"])
-def cadastrar():
-    data = request.get_json()
-    return usuariosConstroller.cadastrar_usuario(data)
+    if validar_email(email):
+        return jsonify({
+            "message": "Email já cadastrado no sistema",
+            "statusCode": 400
+        }), 400
 
-@app.route("/usuarios/login", methods=["POST"])
-def login():
-    data = request.get_json()
-    return usuariosConstroller.login(data)
+    dbUsuario = usuariosModel.Usuarios(usuario, email, senha)
+    db.session.add(dbUsuario)
+
+    try:
+        db.session.commit()  
+        return jsonify({
+        "message": "Cadastro bem-sucedido!",
+        "statusCode": 201
+        }), 201
+    except Exception as error:
+        print(error)
+        return jsonify({
+            "message": "Por algum motivo não conseguimos fazer o cadastro do usuário.",
+            "statusCode": 500
+        }), 500
+        
+def login(data):
+    usuario = data["usuario"]
+    senha = data["senha"]
+
+    dbUsuario = usuariosModel.Usuarios.query.filter_by(usuario=usuario).first()
+    if not dbUsuario or not check_password_hash(dbUsuario.senha, senha):
+        return jsonify({
+            "message": "Credenciais inválidas.",
+            "statusCode": 401
+        }), 401
+
+    return jsonify({
+        "message": "Login bem-sucedido!",
+        "statusCode": 200
+    }), 200
+        
+def validar_email(email):
+    usuario = usuariosModel.Usuarios.query.filter_by(email=email).first()
+    if usuario is None:
+        return False
+    else:
+        return True
+    

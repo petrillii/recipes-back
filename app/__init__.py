@@ -2,18 +2,20 @@ from flask import Flask
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail, Message
-
+from app.api.controllers import *
+import config
 
 app=Flask(__name__)
-
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://admin_erp:!fatec123@bd-trabalho-fabricio-fatecrp.postgres.database.azure.com/projeto_erp?sslmode=require"
-app.config['SECRET_KEY'] = 'secret'
+app.config['SQLALCHEMY_DATABASE_URI'] = config.SQLALCHEMY_DATABASE_URI
+app.config['SECRET_KEY'] = config.SECRET_KEY
+app.config['MAIL_SERVER'] = config.MAIL_SERVER
+app.config['MAIL_PORT'] = config.MAIL_PORT
+app.config['MAIL_USERNAME'] = config.MAIL_USERNAME
+app.config['MAIL_PASSWORD'] = config.MAIL_PASSWORD
+app.config['MAIL_USE_SSL'] = config.MAIL_USE_SSL
+app.config['MAIL_USE_TLS'] = config.MAIL_USE_TLS
 db = SQLAlchemy(app)
-# configuração do Flask-Mail para enviar e-mails
-app.config['MAIL_SERVER']='smtp.gmail.com'
-app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'guilhemeappflow@gmail.com'
-app.config['MAIL_PASSWORD'] = 'oghobneztdbikirt'
-app.config['MAIL_USE_SSL'] = True
-app.config['MAIL_USE_TLS'] = False
 mail = Mail(app)
+
+if __name__ == '__main__':
+    app.run(debug=True)

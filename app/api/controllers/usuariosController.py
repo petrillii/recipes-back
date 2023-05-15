@@ -1,18 +1,30 @@
-import traceback
-from flask import Flask, request, jsonify,send_file
-from app.api.resources import *
-from werkzeug.security import generate_password_hash, check_password_hash
-from flask_sqlalchemy import SQLAlchemy
-import re
-from flask_mail import Mail, Message
-import zipfile
-import os
-import json
+from flask import request, jsonify
+from resources import usuariosResource
+from app.run import app
 
-@app.route('/')
-def index():
-    return 'Hello, world!' 
- 
+@app.route('/usuarios/obter', methods=['GET'])
+def usuarios():
+    usuarios = usuariosResource.obter_usuarios()
+    return jsonify(usuarios)
+
+@app.route('/usuarios/<id>', methods=['GET'])
+def user(id):
+    user = usuariosResource.obter_usuario_por_id(id)
+    if user:
+        return jsonify(user)
+    else:
+        return jsonify({'error': 'User not found'})
+
+@app.route("/usuarios/cadastrar", methods=["POST"])
+def cadastrar():
+    data = request.get_json()
+    return usuariosResource.cadastrar_usuario(data)
+
+@app.route("/usuarios/login", methods=["POST"])
+def login():
+    data = request.get_json()
+    return usuariosResource.login(data)
+
 @app.route("/reset-password", methods=["POST"])
 def reset_password():
     data = request.get_json()
@@ -35,7 +47,7 @@ def reset_password():
         "message": "Um e-mail de redefinição de senha foi enviado para o endereço fornecido.",
         "statusCode": 200
     }), 200
-
+    
 @app.route("/delete", methods=["DELETE"])
 def delete_user_by_email():
     data = request.get_json()
@@ -121,6 +133,3 @@ def export_users():
     os.remove(json_filename)
 
     return send_file(zip_path, mimetype="application/zip", as_attachment=True, attachment_filename=zip_filename)
-
-if __name__ == '__main__':
-    app.run(debug=True)
