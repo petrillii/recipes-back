@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
-app = Flask(_name_)
+app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://seu_usuario:senha@localhost/seu_banco'
 db = SQLAlchemy(app)
 
@@ -136,8 +136,7 @@ class StatusVenda(db.Modelo):
     id_status_venda = db.Column(db.Integer, primary_key=True)
     status_venda = db.Column(db.String)
 
-# Cria as tabelas no banco de dados, caso elas não existam
-db.create_all()
-
-if _name_ == '_main_':
+if __name__ == '_main_':
+    # Cria as tabelas no banco de dados, caso elas não existam
+    db.create_all()
     app.run()
