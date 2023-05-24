@@ -1,6 +1,8 @@
 from flask import request, jsonify
 from resources import usuariosResource
-from app.run import app
+from app.__init__ import app
+
+app.Flask(__name__)
 
 @app.route('/usuarios/obter', methods=['GET'])
 def usuarios():
@@ -30,7 +32,7 @@ def reset_password():
     data = request.get_json()
     email = data["email"]
 
-    user = tb_user.query.filter_by(email=email).first()
+    user = tb_usuario.query.filter_by(email=email).first()
     if not user:
         return jsonify({
             "message": "O e-mail fornecido não está cadastrado.",
@@ -53,7 +55,7 @@ def delete_user_by_email():
     data = request.get_json()
     email = data["email"]
 
-    user = tb_user.query.filter_by(email=email).first()
+    user = tb_usuarios.query.filter_by(email=email).first()
 
     if not user:
         return jsonify({
@@ -105,31 +107,3 @@ def update_user_by_email():
         "statusCode": 200
     }), 200
 
-@app.route("/export-users", methods=["GET"])
-def export_users():
-    users = tb_user.query.all()
-    users_data = []
-
-    for user in users:
-        user_data = {
-            "id": user.id,
-            "username": user.username,
-            "email": user.email,
-        }
-        users_data.append(user_data)
-
-    json_filename = "users.json"
-    with open(json_filename, "w") as json_file:
-        json.dump(users_data, json_file)
-
-    zip_filename = "export.zip"
-    table_name = tb_user.__tablename__
-    export_folder = os.path.join(app.root_path, "export")
-    zip_path = os.path.join(export_folder, zip_filename)
-
-    with zipfile.ZipFile(zip_path, "w") as zip_file:
-        zip_file.write(json_filename, f"{table_name}.json")
-
-    os.remove(json_filename)
-
-    return send_file(zip_path, mimetype="application/zip", as_attachment=True, attachment_filename=zip_filename)

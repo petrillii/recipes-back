@@ -6,7 +6,7 @@ from werkzeug.security import check_password_hash
 app = Flask(__name__)
 db = SQLAlchemy(app)
 
-def obter_usuarios():
+def obter_todos_usuarios():
     users = usuariosModel.Usuarios.query.all()
     return [usuarios.to_dict() for usuarios in users]
 
@@ -19,16 +19,9 @@ def obter_usuario_por_id(id):
     
 def cadastrar_usuario(data):
     usuario = data["usuario"]
-    email = data["email"]
     senha = data["senha"]
 
-    if validar_email(email):
-        return jsonify({
-            "message": "Email já cadastrado no sistema",
-            "statusCode": 400
-        }), 400
-
-    dbUsuario = usuariosModel.Usuarios(usuario, email, senha)
+    dbUsuario = usuariosModel.Usuarios(usuario, senha)
     db.session.add(dbUsuario)
 
     try:
@@ -60,10 +53,4 @@ def login(data):
         "statusCode": 200
     }), 200
         
-def validar_email(email):
-    usuario = usuariosModel.Usuarios.query.filter_by(email=email).first()
-    if usuario is None:
-        return False
-    else:
-        return True
     
