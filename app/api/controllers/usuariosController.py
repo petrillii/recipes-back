@@ -1,8 +1,39 @@
-from flask import request, jsonify
-from resources import usuariosResource
+from flask import request, jsonify,Flask
+from werkzeug.security import generate_password_hash
+from flask_mail import Mail, Message
+from flask_sqlalchemy import SQLAlchemy
+import re
 from app.__init__ import app
+from app import db
+from models.usuariosModel import Usuarios
+from resources import usuariosResource
 
-app.Flask(__name__)
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://admin_erp:!fatec123@bd-trabalho-fabricio-fatecrp.postgres.database.azure.com/projeto_erp?sslmode=require"
+db = SQLAlchemy(app)
+
+app.config['MAIL_SERVER']='smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = 'guilhemeappflow@gmail.com'
+app.config['MAIL_PASSWORD'] = 'oghobneztdbikirt'
+app.config['MAIL_USE_SSL'] = True
+app.config['MAIL_USE_TLS'] = False
+mail = Mail(app)
+
+def validate_password(password):
+    #mínimo 8 caracteres.
+    if len(password) < 8:
+        return False
+    #mínimo 1 letra minuscula
+    if not re.search(r"[a-z]", password):
+        return False
+    #mínimo 1 letra maiuscula
+    if not re.search(r"[A-Z]", password):
+        return False
+    #mínimo 1 número
+    if not re.search(r"\d", password):
+        return False
+    return True
 
 @app.route('/usuarios/obter', methods=['GET'])
 def usuarios():
@@ -32,7 +63,7 @@ def reset_password():
     data = request.get_json()
     email = data["email"]
 
-    user = tb_usuario.query.filter_by(email=email).first()
+    user = Usuarios.query.filter_by(email=email).first()
     if not user:
         return jsonify({
             "message": "O e-mail fornecido não está cadastrado.",
@@ -55,7 +86,7 @@ def delete_user_by_email():
     data = request.get_json()
     email = data["email"]
 
-    user = tb_usuarios.query.filter_by(email=email).first()
+    user = Usuarios.query.filter_by(email=email).first()
 
     if not user:
         return jsonify({
@@ -71,12 +102,12 @@ def delete_user_by_email():
         "statusCode": 200
     }), 200
 
-@app.route("/update", methods=["PUT"])
+@app.route("usuario/update", methods=["PUT"])
 def update_user_by_email():
     data = request.get_json()
     email = data["email"]
 
-    user = tb_user.query.filter_by(email=email).first()
+    user = Usuarios.query.filter_by(email=email).first()
 
     if not user:
         return jsonify({

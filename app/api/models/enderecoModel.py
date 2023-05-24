@@ -16,7 +16,7 @@ class Endereco(db.Model):
 
     funcionario = db.relationship('Funcionario', foreign_keys=[id])
 
-    def __init__(self, id_endereco, cep, logradouro, cidade, estado, bairro, complemento, numero, observacao, id_funcionario):
+    def __init__(self, id_endereco, cep, logradouro, cidade, estado, bairro, complemento, numero, observacao):
         self.id_endereco = id_endereco
         self.cep = cep
         self.logradouro = logradouro
@@ -26,3 +26,4 @@ class Endereco(db.Model):
         self.complemento = complemento
         self.numero = numero
         self.observacao = observacao
+        

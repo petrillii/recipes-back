@@ -21,4 +21,5 @@ class Fornecedor(db.Model):
         self.email = email
         self.telefone = telefone
         self.id_status_fornecedor = id_status_fornecedor
-        self.id_endereco
+        self.id_endereco = id_endereco
+        
