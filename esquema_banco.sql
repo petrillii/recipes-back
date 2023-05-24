@@ -9,6 +9,7 @@ CREATE TABLE tb_status_funcionario(
 CREATE TABLE tb_endereco(
 	id_endereco				INTEGER,
 	cep						VARCHAR(9),
+	logradouro				VARCHAR(60),
 	cidade					VARCHAR(20),
 	estado					VARCHAR(2),
 	bairro					VARCHAR(20),
