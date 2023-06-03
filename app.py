@@ -162,7 +162,7 @@ def register():
 @app.route('/resetPassword', methods=['PUT'])
 def reset_password():
     email = request.json.get('email')
-    new_password = request.json.get('new_password')
+    password = request.json.get('password')
 
     # Verifique se o email existe no banco de dados
     user = User.query.filter_by(email=email).first()
@@ -173,7 +173,7 @@ def reset_password():
         }), 400
 
     # Atualize a senha do usuário
-    user.password = generate_password_hash(new_password)
+    user.password = generate_password_hash(password)
     db.session.commit()
 
     return jsonify({
