@@ -77,7 +77,6 @@ class Category(db.Model):
     def __init__(self, name):
         self.name = name
 
-
     def __init__(self, name):
         self.name = name
 
@@ -232,6 +231,16 @@ def get_categories():
             'name': category.name
         })
     return jsonify(result)
+
+@app.route('/categories', methods=['POST'])
+def create_category():
+    name = request.json.get('name')
+
+    category = Category(name=name)
+    db.session.add(category)
+    db.session.commit()
+
+    return jsonify({'message': 'Categoria criada com sucesso'}), 201
 
 @app.route('/recipes/<int:id>', methods=['GET', 'PUT', 'DELETE'])
 def recipe(id):
