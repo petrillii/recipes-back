@@ -10,6 +10,7 @@ from flask_cors import CORS
 import json
 import zipfile
 from flask import send_file
+import io
 
 app = Flask(__name__)
 CORS(app)
@@ -79,10 +80,6 @@ class Category(db.Model):
 
     def __init__(self, name):
         self.name = name
-
-import requests
-
-import requests
 
 def buscar_imagens(query, access_key):
     url = f"https://api.unsplash.com/search/photos?query={query}&per_page=1"
@@ -224,6 +221,17 @@ def recipes():
                 'image_url': image_url
             })
         return jsonify(result)
+    
+@app.route('/categories', methods=['GET'])
+def get_categories():
+    categories = Category.query.all()
+    result = []
+    for category in categories:
+        result.append({
+            'id': category.id,
+            'name': category.name
+        })
+    return jsonify(result)
 
 @app.route('/recipes/<int:id>', methods=['GET', 'PUT', 'DELETE'])
 def recipe(id):
@@ -277,23 +285,38 @@ def export_recipes():
             'id': recipe.id,
             'title': recipe.title,
             'ingredients': recipe.ingredients.split('\n'),
-            'instructions': recipe.ingredients.split('\n'),  # Atribuir ingredients a instructions
+            'instructions': recipe.instructions.split('\n'),
             'category': {
                 'id': recipe.category.id,
                 'name': recipe.category.name
             },
-            'image_url': recipe.image_url if recipe.image_url else ''  # Adicionar a propriedade image_url
+            'image_url': recipe.image_url or ''
         }
         data.append(recipe_data)
 
-    with open('recipes.json', 'w', encoding='utf-8') as f:  # Adicionar encoding='utf-8'
-        json.dump(data, f, indent=4, ensure_ascii=False)  # Adicionar ensure_ascii=False para suportar caracteres especiais
+    with open('recipes.json', 'w', encoding='utf-8') as f:
+        json.dump(data, f, indent=4, ensure_ascii=False)
 
-    with zipfile.ZipFile('recipes.zip', 'w') as zipf:
+    with zipfile.ZipFile('recipes.zip', 'w', compression=zipfile.ZIP_DEFLATED) as zipf:
         zipf.write('recipes.json')
 
     # Enviar o arquivo ZIP como resposta para download
-    return send_file('recipes.zip', mimetype='application/zip', as_attachment=True, attachment_filename='recipes.zip')
+    return send_file('recipes.zip', mimetype='application/zip', as_attachment=True), 200
+
+@app.route('/recipes/<int:id>/details', methods=['GET'])
+def recipe_details(id):
+    recipe = Recipe.query.get_or_404(id)
+    return jsonify({
+        'id': recipe.id,
+        'title': recipe.title,
+        'ingredients': recipe.ingredients.split('\n'),
+        'instructions': recipe.instructions,
+        'category': {
+            'id': recipe.category.id,
+            'name': recipe.category.name
+        },
+        'image_url': recipe.image_url
+    })
 
 if __name__ == '__main__':
     with app.app_context():

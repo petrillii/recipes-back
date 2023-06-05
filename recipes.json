@@ -1,0 +1,81 @@
+[
+    {
+        "id": 14,
+        "title": "Mojito",
+        "ingredients": [
+            "50ml de rum branco",
+            "Suco de 1 limão",
+            "10 folhas de hortelã",
+            "2 colheres de sopa de açúcar",
+            "Água com gás",
+            "Gelo"
+        ],
+        "instructions": [
+            "1. Em um copo alto, adicione as folhas de hortelã e o açúcar.",
+            "2. Macere suavemente as folhas de hortelã com o açúcar para liberar o aroma.",
+            "3. Adicione o rum e o suco de limão no copo e misture bem.",
+            "4. Adicione gelo até preencher o copo.",
+            "5. Complete com água com gás e mexa novamente.",
+            "6. Decore com uma folha de hortelã e uma fatia de limão, se desejar.",
+            "7. Sirva gelado."
+        ],
+        "category": {
+            "id": 1,
+            "name": "Bebida"
+        },
+        "image_url": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTUwOTh8MHwxfHNlYXJjaHwxfHxNb2ppdG98ZW58MHx8fHwxNjg1NTcxMzc3fDA&ixlib=rb-4.0.3&q=80&w=1080"
+    },
+    {
+        "id": 17,
+        "title": "Cajuína Spritz",
+        "ingredients": [
+            "50ml de cachaça",
+            "100ml de suco de caju",
+            "20ml de xarope de açúcar",
+            "Gelo",
+            "Água com gás",
+            "Fatias de caju para decorar"
+        ],
+        "instructions": [
+            "1. Em um copo alto, adicione a cachaça, o suco de caju e o xarope de açúcar.",
+            "2. Adicione gelo até preencher o copo.",
+            "3. Misture bem todos os ingredientes.",
+            "4. Complete com água com gás, adicionando-a aos poucos para obter a efervescência desejada.",
+            "5. Decore o copo com fatias de caju.",
+            "6. Sirva imediatamente."
+        ],
+        "category": {
+            "id": 1,
+            "name": "Bebida"
+        },
+        "image_url": "https://images.unsplash.com/photo-1607453344099-16118a43e716?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTUwOTh8MHwxfHNlYXJjaHwxfHxDYWp1JUMzJUFEbmElMjBTcHJpdHp8ZW58MHx8fHwxNjg1NTcxNjgxfDA&ixlib=rb-4.0.3&q=80&w=1080"
+    },
+    {
+        "id": 22,
+        "title": "Bolo de Cenoura",
+        "ingredients": [
+            "2 cenouras médias",
+            "3 ovos",
+            "1 xícara de óleo",
+            "2 xícaras de açúcar",
+            "2 xícaras de farinha de trigo",
+            "1 colher de sopa de fermento em pó"
+        ],
+        "instructions": [
+            "1. Preaqueça o forno a 180°C.",
+            "2. Descasque e pique as cenouras em pedaços pequenos.",
+            "3. No liquidificador, adicione as cenouras picadas, os ovos, o óleo e o açúcar. Bata até obter uma mistura homogênea.",
+            "4. Transfira a mistura para uma tigela e adicione a farinha de trigo. Misture bem até incorporar todos os ingredientes.",
+            "5. Acrescente o fermento em pó e misture delicadamente.",
+            "6. Despeje a massa em uma forma untada e enfarinhada.",
+            "7. Leve ao forno por aproximadamente 40 minutos, ou até que um palito inserido no centro do bolo saia limpo.",
+            "8. Retire o bolo do forno e deixe esfriar completamente antes de desenformar.",
+            "9. Sirva o bolo de cenoura em fatias e aproveite!"
+        ],
+        "category": {
+            "id": 2,
+            "name": "Doce"
+        },
+        "image_url": "https://images.unsplash.com/photo-1650937254058-d952a67a4f46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTUwOTh8MHwxfHNlYXJjaHwxfHxCb2xvJTIwZGUlMjBDZW5vdXJhfGVufDB8fHx8MTY4NTU4MjM4M3ww&ixlib=rb-4.0.3&q=80&w=1080"
+    }
+]
