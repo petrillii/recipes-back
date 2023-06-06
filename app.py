@@ -232,6 +232,16 @@ def get_categories():
         })
     return jsonify(result)
 
+@app.route('/categories/<int:id>', methods=['PUT'])
+def update_category(id):
+    category = Category.query.get_or_404(id)
+    name = request.json.get('name')
+
+    category.name = name
+    db.session.commit()
+
+    return jsonify({'message': 'Categoria atualizada com sucesso'})
+
 @app.route('/categories', methods=['POST'])
 def create_category():
     name = request.json.get('name')

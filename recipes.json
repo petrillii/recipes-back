@@ -77,5 +77,428 @@
             "name": "Doce"
         },
         "image_url": "https://images.unsplash.com/photo-1650937254058-d952a67a4f46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTUwOTh8MHwxfHNlYXJjaHwxfHxCb2xvJTIwZGUlMjBDZW5vdXJhfGVufDB8fHx8MTY4NTU4MjM4M3ww&ixlib=rb-4.0.3&q=80&w=1080"
+    },
+    {
+        "id": 32,
+        "title": "Guacamole",
+        "ingredients": [
+            "2 abacates maduros",
+            "1 tomate picado",
+            "1 cebola roxa picada",
+            "Suco de 1 limão",
+            "Coentro picado a gosto",
+            "Sal e pimenta a gosto",
+            "Pimenta dedo-de-moça picada a gosto (opcional)"
+        ],
+        "instructions": [
+            "1. Corte os abacates ao meio, remova o caroço e retire a polpa com uma colher.",
+            "2. Amasse a polpa dos abacates em uma tigela grande.",
+            "3. Adicione o tomate, a cebola, o suco de limão e o coentro picado.",
+            "4. Tempere com sal, pimenta e pimenta dedo-de-moça a gosto.",
+            "5. Misture todos os ingredientes até obter uma consistência cremosa.",
+            "6. Prove e ajuste os temperos conforme necessário.",
+            "7. Leve à geladeira por pelo menos 30 minutos antes de servir.",
+            "8. Sirva com nachos, tacos ou como acompanhamento de pratos mexicanos."
+        ],
+        "category": {
+            "id": 3,
+            "name": "Salgado"
+        },
+        "image_url": "https://images.unsplash.com/photo-1595016111459-799a195e7452?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTUwOTh8MHwxfHNlYXJjaHwxfHxHdWFjYW1vbGV8ZW58MHx8fHwxNjg2MDAxNDQ4fDA&ixlib=rb-4.0.3&q=80&w=1080"
+    },
+    {
+        "id": 42,
+        "title": "Pink Lemonade",
+        "ingredients": [
+            "4 limões",
+            "1 xícara de açúcar",
+            "4 xícaras de água fria",
+            "1 xícara de suco de cranberry",
+            "Gelo a gosto",
+            "Fatias de limão e folhas de hortelã para decorar (opcional)"
+        ],
+        "instructions": [
+            "1. Esprema os limões para extrair o suco e reserve.",
+            "2. Em uma jarra grande, misture o açúcar com 1 xícara de água quente. Mexa bem até que o açúcar esteja completamente dissolvido.",
+            "3. Adicione o suco de limão espremido, o suco de cranberry e as 3 xícaras restantes de água fria. Misture bem.",
+            "4. Adicione gelo à jarra para esfriar a limonada e misture novamente.",
+            "5. Sirva a Pink Lemonade em copos com gelo e decore com fatias de limão e folhas de hortelã, se desejar.",
+            "6. Aproveite a refrescante e saborosa Pink Lemonade!"
+        ],
+        "category": {
+            "id": 3,
+            "name": "Salgado"
+        },
+        "image_url": "https://images.unsplash.com/photo-1558470570-c9a5a5ade867?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTUwOTh8MHwxfHNlYXJjaHwxfHxQaW5rJTIwTGVtb25hZGV8ZW58MHx8fHwxNjg2MDAyMzEwfDA&ixlib=rb-4.0.3&q=80&w=1080"
+    },
+    {
+        "id": 41,
+        "title": "Cheesecake de Morango",
+        "ingredients": [
+            "200g de biscoito maisena",
+            "100g de manteiga derretida",
+            "500g de cream cheese",
+            "1 lata de leite condensado",
+            "1 colher de sopa de suco de limão",
+            "1 colher de chá de essência de baunilha",
+            "300g de morangos frescos"
+        ],
+        "instructions": [
+            "1. Triture os biscoitos maisena até obter uma farofa fina.",
+            "2. Em uma tigela, misture a farofa de biscoito com a manteiga derretida até formar uma massa úmida.",
+            "3. Forre o fundo de uma forma de fundo removível com a massa de biscoito e pressione bem para nivelar.",
+            "4. Leve à geladeira por 30 minutos para firmar.",
+            "5. Enquanto isso, prepare o recheio de cheesecake.",
+            "6. Na batedeira, bata o cream cheese até ficar cremoso.",
+            "7. Adicione o leite condensado, o suco de limão e a essência de baunilha, e continue batendo até obter um creme homogêneo.",
+            "8. Despeje o creme sobre a base de biscoito na forma.",
+            "9. Leve à geladeira por pelo menos 4 horas, ou até firmar completamente.",
+            "10. Antes de servir, decore com morangos frescos por cima.",
+            "11. Desenforme cuidadosamente e sirva gelado."
+        ],
+        "category": {
+            "id": 2,
+            "name": "Doce"
+        },
+        "image_url": "https://images.unsplash.com/photo-1598065412434-6544dc76f81f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTUwOTh8MHwxfHNlYXJjaHwxfHxDaGVlc2VjYWtlJTIwZGUlMjBNb3JhbmdvfGVufDB8fHx8MTY4NjAwMjE5NXww&ixlib=rb-4.0.3&q=80&w=1080"
+    },
+    {
+        "id": 43,
+        "title": "Torta de Maçã",
+        "ingredients": [
+            "4 maçãs",
+            "1 xícara de açúcar",
+            "2 colheres de sopa de farinha de trigo",
+            "1 colher de chá de canela em pó",
+            "1/4 colher de chá de noz-moscada",
+            "Suco de 1/2 limão",
+            "Massa para torta",
+            "Manteiga para pincelar",
+            "Açúcar para polvilhar"
+        ],
+        "instructions": [
+            "1. Descasque as maçãs, retire o miolo e corte em fatias finas.",
+            "2. Em uma tigela, misture o açúcar, a farinha de trigo, a canela em pó e a noz-moscada.",
+            "3. Adicione as fatias de maçã à mistura de açúcar e especiarias, e regue com o suco de limão. Misture bem.",
+            "4. Forre uma forma de torta com a massa e despeje o recheio de maçã.",
+            "5. Cubra a torta com uma segunda camada de massa, fazendo cortes para permitir a saída de vapor.",
+            "6. Pincele a superfície da torta com manteiga derretida e polvilhe açúcar por cima.",
+            "7. Asse em forno preaquecido a 180°C por cerca de 40-45 minutos, ou até que a torta esteja dourada e as maçãs estejam macias.",
+            "8. Deixe esfriar um pouco antes de servir. A torta de maçã pode ser servida sozinha ou acompanhada de sorvete de baunilha."
+        ],
+        "category": {
+            "id": 2,
+            "name": "Doce"
+        },
+        "image_url": "https://images.unsplash.com/photo-1663585120578-4d7ed5bfe1c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTUwOTh8MHwxfHNlYXJjaHwxfHxUb3J0YSUyMGRlJTIwTWElQzMlQTclQzMlQTN8ZW58MHx8fHwxNjg2MDAyNDc1fDA&ixlib=rb-4.0.3&q=80&w=1080"
+    },
+    {
+        "id": 35,
+        "title": "Panquecas Americanas",
+        "ingredients": [
+            "1 xícara de farinha de trigo",
+            "2 colheres de sopa de açúcar",
+            "1 colher de chá de fermento em pó",
+            "1/2 colher de chá de bicarbonato de sódio",
+            "1/4 de colher de chá de sal",
+            "1 ovo",
+            "1 xícara de leite",
+            "2 colheres de sopa de manteiga derretida",
+            "Óleo vegetal para untar a frigideira"
+        ],
+        "instructions": [
+            "1. Em uma tigela, misture a farinha de trigo, o açúcar, o fermento em pó, o bicarbonato de sódio e o sal.",
+            "2. Em outra tigela, bata o ovo e adicione o leite e a manteiga derretida. Misture bem.",
+            "3. Despeje a mistura líquida na mistura de ingredientes secos e mexa até obter uma massa homogênea.",
+            "4. Aqueça uma frigideira antiaderente em fogo médio e unte com óleo vegetal.",
+            "5. Despeje cerca de 1/4 de xícara de massa na frigideira para formar cada panqueca.",
+            "6. Cozinhe por cerca de 2 minutos, ou até que bolhas apareçam na superfície da panqueca.",
+            "7. Vire a panqueca e cozinhe por mais 1-2 minutos, ou até que esteja dourada.",
+            "8. Repita o processo com o restante da massa.",
+            "9. Sirva as panquecas quentes com xarope de bordo, frutas frescas ou outros acompanhamentos de sua preferência."
+        ],
+        "category": {
+            "id": 3,
+            "name": "Salgado"
+        },
+        "image_url": "https://images.unsplash.com/photo-1612711501595-9f2def1e4837?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTUwOTh8MHwxfHNlYXJjaHwxfHxQYW5xdWVjYXMlMjBBbWVyaWNhbmFzfGVufDB8fHx8MTY4NjAwMTY1M3ww&ixlib=rb-4.0.3&q=80&w=1080"
+    },
+    {
+        "id": 36,
+        "title": "Brownie de Chocolate",
+        "ingredients": [
+            "200g de chocolate meio amargo",
+            "200g de manteiga",
+            "1 e 1/2 xícaras de açúcar",
+            "4 ovos",
+            "1 colher de chá de essência de baunilha",
+            "1 e 1/2 xícaras de farinha de trigo",
+            "1 colher de chá de fermento em pó",
+            "1/2 colher de chá de sal",
+            "1 xícara de nozes picadas (opcional)"
+        ],
+        "instructions": [
+            "1. Pré-aqueça o forno a 180°C e unte uma assadeira quadrada com manteiga e farinha.",
+            "2. Em banho-maria, derreta o chocolate meio amargo e a manteiga juntos. Mexa bem até obter uma mistura homogênea.",
+            "3. Em outra tigela, misture o açúcar, os ovos e a essência de baunilha. Adicione a mistura de chocolate derretido e misture bem.",
+            "4. Peneire a farinha de trigo, o fermento em pó e o sal sobre a mistura líquida e mexa até incorporar todos os ingredientes.",
+            "5. Se desejar, adicione as nozes picadas e misture novamente.",
+            "6. Despeje a massa na assadeira preparada e espalhe uniformemente.",
+            "7. Asse no forno pré-aquecido por cerca de 25-30 minutos, ou até que um palito inserido no centro saia com algumas migalhas úmidas.",
+            "8. Deixe esfriar antes de cortar em quadrados e servir."
+        ],
+        "category": {
+            "id": 2,
+            "name": "Doce"
+        },
+        "image_url": "https://images.unsplash.com/photo-1551024506-0bccd828d307?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTUwOTh8MHwxfHNlYXJjaHwxfHxCcm93bmllJTIwZGUlMjBDaG9jb2xhdGV8ZW58MHx8fHwxNjg2MDAxNzkyfDA&ixlib=rb-4.0.3&q=80&w=1080"
+    },
+    {
+        "id": 37,
+        "title": "Chilli de Carne",
+        "ingredients": [
+            "500g de carne moída",
+            "1 cebola picada",
+            "2 dentes de alho picados",
+            "1 pimentão verde picado",
+            "1 lata de feijão vermelho cozido",
+            "1 lata de tomate pelado",
+            "2 colheres de sopa de molho de pimenta",
+            "2 colheres de chá de cominho em pó",
+            "1 colher de chá de páprica em pó",
+            "1/2 colher de chá de canela em pó",
+            "Sal e pimenta a gosto",
+            "Azeite de oliva para refogar"
+        ],
+        "instructions": [
+            "1. Aqueça o azeite em uma panela grande e refogue a cebola, o alho e o pimentão até ficarem macios.",
+            "2. Adicione a carne moída e cozinhe até que esteja bem dourada.",
+            "3. Acrescente o feijão vermelho, o tomate pelado (amassado com um garfo), o molho de pimenta, o cominho, a páprica, a canela, o sal e a pimenta. Misture bem.",
+            "4. Deixe o chilli ferver e reduza o fogo. Cozinhe por aproximadamente 30 minutos, mexendo ocasionalmente.",
+            "5. Ajuste o tempero conforme necessário.",
+            "6. Sirva quente acompanhado de arroz, tortilhas de milho, guacamole e outros acompanhamentos de sua preferência."
+        ],
+        "category": {
+            "id": 3,
+            "name": "Salgado"
+        },
+        "image_url": "https://images.unsplash.com/photo-1598357850720-66c31f425bfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTUwOTh8MHwxfHNlYXJjaHwxfHxDaGlsbGklMjBkZSUyMENhcm5lfGVufDB8fHx8MTY4NjAwMTg2MXww&ixlib=rb-4.0.3&q=80&w=1080"
+    },
+    {
+        "id": 38,
+        "title": "Salmão Assado com Ervas",
+        "ingredients": [
+            "4 filés de salmão",
+            "2 colheres de sopa de azeite de oliva",
+            "1 colher de sopa de suco de limão",
+            "2 dentes de alho picados",
+            "1 colher de chá de alecrim picado",
+            "1 colher de chá de tomilho picado",
+            "Sal e pimenta a gosto",
+            "Rodelas de limão (para decorar)"
+        ],
+        "instructions": [
+            "1. Pré-aqueça o forno a 200°C.",
+            "2. Em uma tigela pequena, misture o azeite de oliva, o suco de limão, o alho, o alecrim, o tomilho, o sal e a pimenta.",
+            "3. Coloque os filés de salmão em uma assadeira forrada com papel alumínio.",
+            "4. Espalhe a mistura de ervas sobre o salmão, cobrindo todos os lados.",
+            "5. Leve ao forno pré-aquecido e asse por aproximadamente 12-15 minutos, ou até que o salmão esteja cozido e levemente dourado.",
+            "6. Decore com rodelas de limão e sirva quente."
+        ],
+        "category": {
+            "id": 3,
+            "name": "Salgado"
+        },
+        "image_url": "https://images.unsplash.com/photo-1534345297779-87af8f3a4455?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTUwOTh8MHwxfHNlYXJjaHwxfHxTYWxtJUMzJUEzbyUyMEFzc2FkbyUyMGNvbSUyMEVydmFzfGVufDB8fHx8MTY4NjAwMTkwN3ww&ixlib=rb-4.0.3&q=80&w=1080"
+    },
+    {
+        "id": 39,
+        "title": "Bolo de Cenoura com Cobertura de Chocolate",
+        "ingredients": [
+            "2 cenouras médias",
+            "3 ovos",
+            "1 xícara de óleo vegetal",
+            "2 xícaras de farinha de trigo",
+            "2 xícaras de açúcar",
+            "1 colher de sopa de fermento em pó",
+            "1 pitada de sal",
+            "Para a cobertura:",
+            "4 colheres de sopa de manteiga",
+            "6 colheres de sopa de chocolate em pó",
+            "1 xícara de açúcar",
+            "1/2 xícara de leite"
+        ],
+        "instructions": [
+            "1. Preaqueça o forno a 180°C e unte uma forma redonda com manteiga e farinha.",
+            "2. Descasque e corte as cenouras em pedaços.",
+            "3. No liquidificador, bata as cenouras, os ovos e o óleo até obter uma mistura homogênea.",
+            "4. Em uma tigela grande, peneire a farinha de trigo, o açúcar, o fermento em pó e o sal.",
+            "5. Despeje a mistura líquida no recipiente com os ingredientes secos e mexa bem até formar uma massa homogênea.",
+            "6. Transfira a massa para a forma preparada e leve ao forno por aproximadamente 40-45 minutos, ou até que um palito inserido no centro saia limpo.",
+            "7. Enquanto o bolo assa, prepare a cobertura: em uma panela, derreta a manteiga e adicione o chocolate em pó, o açúcar e o leite. Mexa bem até obter uma consistência cremosa.",
+            "8. Retire o bolo do forno e deixe esfriar antes de desenformar.",
+            "9. Cubra o bolo com a cobertura de chocolate e sirva."
+        ],
+        "category": {
+            "id": 2,
+            "name": "Doce"
+        },
+        "image_url": "https://images.unsplash.com/photo-1607920591413-4ec007e70023?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTUwOTh8MHwxfHNlYXJjaHwxfHxCb2xvJTIwZGUlMjBDZW5vdXJhJTIwY29tJTIwQ29iZXJ0dXJhJTIwZGUlMjBDaG9jb2xhdGV8ZW58MHx8fHwxNjg2MDAxOTMwfDA&ixlib=rb-4.0.3&q=80&w=1080"
+    },
+    {
+        "id": 40,
+        "title": "Piña Colada",
+        "ingredients": [
+            "50ml de rum branco",
+            "100ml de suco de abacaxi",
+            "50ml de leite de coco",
+            "2 colheres de sopa de açúcar",
+            "Gelo picado",
+            "Fatia de abacaxi para decorar"
+        ],
+        "instructions": [
+            "1. Em um liquidificador, adicione o rum branco, o suco de abacaxi, o leite de coco e o açúcar.",
+            "2. Adicione o gelo picado até atingir a consistência desejada.",
+            "3. Bata bem até obter uma mistura homogênea.",
+            "4. Despeje em um copo alto.",
+            "5. Decore com uma fatia de abacaxi na borda do copo.",
+            "6. Sirva com um canudo e aproveite."
+        ],
+        "category": {
+            "id": 1,
+            "name": "Bebida"
+        },
+        "image_url": "https://images.unsplash.com/photo-1598217005661-13b6307fe2c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTUwOTh8MHwxfHNlYXJjaHwxfHxQaSVDMyVCMWElMjBDb2xhZGF8ZW58MHx8fHwxNjg2MDAyMDI5fDA&ixlib=rb-4.0.3&q=80&w=1080"
+    },
+    {
+        "id": 44,
+        "title": "Salada Caesar",
+        "ingredients": [
+            "1 cabeça de alface romana",
+            "1/2 xícara de croutons",
+            "1/4 xícara de queijo parmesão ralado",
+            "3 colheres de sopa de azeite de oliva",
+            "1 colher de sopa de suco de limão",
+            "1 dente de alho, picado",
+            "1 colher de chá de mostarda Dijon",
+            "1 colher de chá de molho Worcestershire",
+            "1 ovo cozido, picado (opcional)",
+            "Sal e pimenta a gosto"
+        ],
+        "instructions": [
+            "1. Lave e seque as folhas de alface romana. Rasgue-as em pedaços menores e coloque em uma tigela.",
+            "2. Adicione os croutons por cima da alface.",
+            "3. Em uma tigela pequena, misture o azeite de oliva, o suco de limão, o alho picado, a mostarda Dijon e o molho Worcestershire. Tempere com sal e pimenta a gosto.",
+            "4. Regue a salada com o molho Caesar e misture bem para distribuir o molho por todas as folhas.",
+            "5. Polvilhe queijo parmesão ralado por cima da salada.",
+            "6. Se desejar, adicione ovo cozido picado para enriquecer a salada.",
+            "7. Sirva imediatamente e aproveite esta deliciosa salada Caesar!"
+        ],
+        "category": {
+            "id": 3,
+            "name": "Salgado"
+        },
+        "image_url": "https://images.unsplash.com/photo-1574926054530-540288c8e678?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTUwOTh8MHwxfHNlYXJjaHwxfHxTYWxhZGElMjBDYWVzYXJ8ZW58MHx8fHwxNjg2MDAyNTMwfDA&ixlib=rb-4.0.3&q=80&w=1080"
+    },
+    {
+        "id": 45,
+        "title": "Tacos de Carnitas",
+        "ingredients": [
+            "500g de carne de porco (pernil), cortada em pedaços",
+            "1 cebola média, picada",
+            "4 dentes de alho, picados",
+            "Suco de 1 laranja",
+            "Suco de 1 limão",
+            "1 colher de chá de cominho em pó",
+            "1 colher de chá de páprica doce",
+            "1 colher de chá de orégano",
+            "Sal e pimenta a gosto",
+            "Óleo vegetal para fritar",
+            "Tortilhas de milho",
+            "Cebola e coentro picados para servir"
+        ],
+        "instructions": [
+            "1. Em uma tigela, tempere a carne de porco com a cebola, o alho, o suco de laranja, o suco de limão, o cominho em pó, a páprica doce, o orégano, sal e pimenta. Misture bem e deixe marinar por pelo menos 1 hora.",
+            "2. Aqueça uma panela grande em fogo médio-alto e adicione um pouco de óleo vegetal.",
+            "3. Adicione a carne de porco marinada e cozinhe até ficar dourada e macia, mexendo ocasionalmente.",
+            "4. Retire a carne de porco da panela e desfie com dois garfos.",
+            "5. Aqueça as tortilhas de milho em uma frigideira quente.",
+            "6. Monte os tacos colocando uma porção de carne desfiada em cada tortilha e adicionando cebola e coentro picados por cima.",
+            "7. Sirva os tacos de carnitas quentes acompanhados de molho de pimenta, guacamole e outros acompanhamentos de sua preferência."
+        ],
+        "category": {
+            "id": 3,
+            "name": "Salgado"
+        },
+        "image_url": "https://images.unsplash.com/photo-1512427691650-15fcce1dc7b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTUwOTh8MHwxfHNlYXJjaHwxfHxUYWNvcyUyMGRlJTIwQ2Fybml0YXN8ZW58MHx8fHwxNjg2MDAyNTcxfDA&ixlib=rb-4.0.3&q=80&w=1080"
+    },
+    {
+        "id": 46,
+        "title": "Pão de Queijo",
+        "ingredients": [
+            "500g de polvilho azedo",
+            "250ml de leite",
+            "125ml de óleo vegetal",
+            "2 ovos",
+            "200g de queijo minas padrão ralado",
+            "Sal a gosto"
+        ],
+        "instructions": [
+            "1. Preaqueça o forno a 180°C.",
+            "2. Em uma panela, aqueça o leite e o óleo até ferver.",
+            "3. Em uma tigela, coloque o polvilho e adicione a mistura de leite e óleo quente. Mexa bem.",
+            "4. Espere a massa esfriar um pouco e acrescente os ovos, um de cada vez, misturando bem.",
+            "5. Adicione o queijo ralado e o sal. Misture até obter uma massa homogênea.",
+            "6. Modele bolinhas com a massa e coloque em uma assadeira untada.",
+            "7. Leve ao forno preaquecido por cerca de 20 minutos, ou até os pãezinhos ficarem dourados.",
+            "8. Sirva quente."
+        ],
+        "category": {
+            "id": 3,
+            "name": "Salgado"
+        },
+        "image_url": "https://images.unsplash.com/photo-1598142982901-df6cec10ae35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTUwOTh8MHwxfHNlYXJjaHwxfHxQJUMzJUEzbyUyMGRlJTIwUXVlaWpvfGVufDB8fHx8MTY4NjAwMjYzNnww&ixlib=rb-4.0.3&q=80&w=1080"
+    },
+    {
+        "id": 47,
+        "title": "Margarita",
+        "ingredients": [
+            "50ml de tequila",
+            "30ml de suco de limão",
+            "20ml de licor de laranja",
+            "1 colher de chá de açúcar",
+            "Gelo"
+        ],
+        "instructions": [
+            "1. Em uma coqueteleira, coloque a tequila, o suco de limão, o licor de laranja e o açúcar.",
+            "2. Adicione o gelo na coqueteleira.",
+            "3. Feche bem a coqueteleira e agite vigorosamente por alguns segundos.",
+            "4. Passe a borda de uma taça de margarita em uma fatia de limão para umedecer.",
+            "5. Em um prato raso, coloque sal.",
+            "6. Passe a borda umedecida da taça de margarita no sal para formar uma borda salgada.",
+            "7. Coe o conteúdo da coqueteleira para a taça preparada.",
+            "8. Decore com uma rodela de limão.",
+            "9. Sirva imediatamente."
+        ],
+        "category": {
+            "id": 1,
+            "name": "Bebida"
+        },
+        "image_url": "https://images.unsplash.com/photo-1634003311194-152e30e732f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTUwOTh8MHwxfHNlYXJjaHwxfHxNYXJnYXJpdGF8ZW58MHx8fHwxNjg2MDAyOTQwfDA&ixlib=rb-4.0.3&q=80&w=1080"
+    },
+    {
+        "id": 52,
+        "title": "Mac and Cheese",
+        "ingredients": [
+            "{\"2 xícaras de macarrão elbow\",\"2 colheres de sopa de manteiga\",\"2 colheres de sopa de farinha de trigo\",\"2 xícaras de leite\",\"2 xícaras de queijo cheddar ralado\",\"Sal a gosto\",\"Pimenta a gosto\"}"
+        ],
+        "instructions": [
+            "{\"Cozinhe o macarrão de acordo com as instruções da embalagem.\",\"Em uma panela separada, derreta a manteiga em fogo médio.\",\"Adicione a farinha de trigo e cozinhe por cerca de 1 minuto, mexendo sempre.\",\"Gradualmente, adicione o leite, mexendo constantemente até engrossar.\",\"Retire a panela do fogo e adicione o queijo cheddar, mexendo até derreter completamente.\",\"Tempere com sal e pimenta a gosto.\",\"Misture o molho de queijo com o macarrão cozido e sirva.\"}"
+        ],
+        "category": {
+            "id": 3,
+            "name": "Salgado"
+        },
+        "image_url": "https://images.unsplash.com/photo-1543339494-b4cd4f7ba686?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTUwOTh8MHwxfHNlYXJjaHwxfHxNYWMlMjBhbmQlMjBDaGVlc2V8ZW58MHx8fHwxNjg2MDA0NzI1fDA&ixlib=rb-4.0.3&q=80&w=1080"
     }
 ]
