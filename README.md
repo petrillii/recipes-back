@@ -38,5 +38,3 @@ Este é um projeto Flask que implementa uma API de receitas. A API permite criar
    ```
 
 2. Execute os passos do repositório https://github.com/petrillii/trabFabricioFront para consumi-la.
-
-3. Consulte a documentação da API para obter informações sobre os endpoints disponíveis e como usá-los.
