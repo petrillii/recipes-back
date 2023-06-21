@@ -1,4 +1,4 @@
-SQLALCHEMY_DATABASE_URI = "postgresql://admin_erp:!fatec123@bd-trabalho-fabricio-fatecrp.postgres.database.azure.com/projeto_erp?sslmode=require"
+SQLALCHEMY_DATABASE_URI = ""
 SECRET_KEY = 'secret'
 MAIL_SERVER = 'smtp.gmail.com'
 MAIL_PORT = 465

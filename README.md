@@ -7,23 +7,17 @@ Este é um projeto Flask que implementa uma API de receitas. A API permite criar
 1. Clone o repositório para o seu ambiente local:
 
    ```shell
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/petrillii/recipes-back
    ```
 
-2. Acesse o diretório do projeto:
-
-   ```shell
-   cd nome-do-repositorio
-   ```
-
-3. Crie e ative um ambiente virtual (recomendado):
+2. Crie e ative um ambiente virtual (recomendado):
 
    ```shell
    python -m venv venv
    source venv/bin/activate
    ```
 
-4. Instale as dependências do projeto:
+3. Instale as dependências do projeto:
 
    ```shell
    pip install -r requirements.txt
@@ -37,4 +31,4 @@ Este é um projeto Flask que implementa uma API de receitas. A API permite criar
    python app.py
    ```
 
-2. Execute os passos do repositório https://github.com/petrillii/trabFabricioFront para consumi-la.
+2. Execute os passos do repositório https://github.com/petrillii/recipes-front para consumi-la.

@@ -15,8 +15,8 @@ import io
 app = Flask(__name__)
 CORS(app)
 CORS(app, origins='*', methods=['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'])
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://admin_erp:!fatec123@bd-trabalho-fabricio-fatecrp.postgres.database.azure.com/projeto_erp?sslmode=require"
-app.secret_key = os.environ.get("df016d8d4a43c166d2f1aa1cb4a45be465fb6fa02ae9674bbc10ac7b09ebbaa5")
+app.config['SQLALCHEMY_DATABASE_URI'] = ""
+app.secret_key = os.environ.get("")
 db = SQLAlchemy(app)
 
 def validate_password(password):
